@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #65665C;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #65665C;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+}
+
+.sub-title {
+    font-size: 80px;
+}
+
+.family .container {
+    position: relative;
+    z-index: 2;
+}
+
+.family {
+    position: relative;
+}
+
+.social svg:hover path {
+    fill: rgb(234, 88, 12, 1);
+}
+
+.footer__link p,
+.footer__link a {
+    color: #2A2C1F;
+}
+
+.footer__link a:hover {
+    color: #CF6F49;
+}
+
+.footer__link p,
+.footer__link li {
+    margin-bottom: 16px;
+
+}
+
+.footer__link li {
+    font-size: 14px;
+}
+
+
+.family:before {
+    display: block;
+    position: absolute;
+    content: "";
+    background: #F5F5F2;
+    width: 100%;
+    height: 50%;
+    bottom: 50%;
+    left: 0;
+    z-index: 1;
+}
+
+@layer base {
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #65665C;
+    }
+}
+@layer components {
+    .container {
+        @apply max-w-[1320px]
+    }
+}
+@media (max-width: 768px) {
+    .footer__link p,
+    .footer__link li {
+        text-align: center;
+    }
+
+    .footer__link img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 992px;
+    }
+
+    :after, :before {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 576px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 488px;
+    }
+}
+
+@media (max-width: 488px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.banner-wrapper {
+    position: relative;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner:before {
+    content: "";
+    position: absolute;
+    background: url("../src/img/step-left.png");
+    top: 0;
+    left: 0;
+    width: 135px;
+    height: 135px;
+}
+
+.banner-wrapper:after {
+    content: "";
+    position: absolute;
+    background: url("../src/img/step-right.png");
+    bottom: 0;
+    right: 0;
+    width: 135px;
+    height: 135px;
+}
+
+.area {
+    position: relative;
+}
+
+.area:before {
+    content: "";
+    position: absolute;
+    background: url("../src/img/step-top-right.png");
+    top: 0;
+    right: 0;
+    width: 135px;
+    height: 135px;
+}
+
+.area:after {
+    content: "";
+    position: absolute;
+    background: url("../src/img/step-bottom-left.png");
+    bottom: 0;
+    left: 0;
+    width: 135px;
+    height: 135px;
+}
+
+
+svg {
+    display: inline-block;
+}
+
+*:hover {
+    transition: .5s;
+}
+
+
